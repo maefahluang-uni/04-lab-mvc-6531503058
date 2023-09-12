@@ -8,6 +8,21 @@
 <body>
     <h1>Add Concert</h1>
     <!-- add form for adding concert-->
+    <form th:action="@{/concerts}" th:object ="${concert}" method="post">
+        <label for="title">Title</label>
+        <input type="text" id="title" th:field="*{title}" >
 
+        <label for="performer"> Performer</label>
+        <input type="text" id="performer" th:field="*{performer}" >
+
+        <label for="date">Date</label>
+        <input type="date" id="date" th:field="*{date}" >
+        
+        <label for="description">Description</label>
+        <input type="text" id="description" th:field="*{description}" >
+
+        <button type="submit">submit</button>
+    </form>
+    
 </body>
 </html>
